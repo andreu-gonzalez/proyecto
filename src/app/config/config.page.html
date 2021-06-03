@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración</ion-title>
+    <!--Back button top left-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/R"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form #FProducto="ngForm" (ngSubmit)="FormSubmit()">
+      <!--Field for Ip config-->
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="IP" type="text"   name="ip" placeholder="Introducir IP servidor">
+      </mat-form-field>
+      <!--Field for Paso??-->
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="PASO" type="text"   name="paso" placeholder="Introducir Paso">
+      </mat-form-field>
+      <!--Field for Refresh Rate-->
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="REF" type="text"   name="ref" placeholder="Introducir Tiempo de Resresco">
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-raised-button color="primary">
+        <mat-icon>cloud_upload</mat-icon>
+      </button>
+    </form>
+  </mat-card>
+</ion-content>
+
